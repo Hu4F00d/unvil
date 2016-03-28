@@ -1,9 +1,26 @@
 Rails.application.routes.draw do
+  
+  root 'static#index'
+
+  get 'careers', to: 'static#careers'
+  
+  get '/es', to: 'static#index_es'
+  
+  get '/en', to: 'static#index'
+  
+  get 'careers_es', to: 'static#careers_es'
+  
+  get 'portfolio_es', to: 'static#portfolio_es'    
+  
+  get 'portfolio', to: 'static#portfolio'
+  
+  get 'index_es', to: 'static#index_es'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'static#index'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
