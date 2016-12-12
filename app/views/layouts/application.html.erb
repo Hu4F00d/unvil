@@ -18,13 +18,13 @@
 <body>
   <% if params[:action] == "index" || params[:action] == "careers" || params[:action] == "portfolio"%>
     <%= render 'header'  %>
-      <div class='main'>
+      <div class='main clearfix'>
         <%= yield %>  
       </div>
     <%= render 'footer'  %>
   <% else %>
     <%= render 'header_es'  %>
-      <div class='main'>
+      <div class='main clearfix'>
         <%= yield %>  
       </div>  
     <%= render 'footer_es'  %>

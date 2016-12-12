@@ -4,7 +4,8 @@ input,
 select,
 textarea { color: #222; }
 
-body { border-top: 5px solid #37464F; font-family: "HelveticaNeueLTStd-Lt", helvetica, sans-serif; font-size: 1em; line-height: 1.4; }
+html { width: 100%; }
+body { width: 100%; border-top: 5px solid #37464F; font-family: "HelveticaNeueLTStd-Lt", helvetica, sans-serif; font-size: 1em; line-height: 1.4; }
 
 ::-moz-selection { background: #b3d4fc; text-shadow: none; }
 ::selection { background: #b3d4fc; text-shadow: none; }
@@ -51,7 +52,7 @@ textarea { resize: vertical; }
 #header { height: 160px; width: 100%; }
     #header-center { margin: 0 110px; width: auto; }
         #figure { float: left; height: 93px; margin-top: 30px; width: 250px; }
-        #nav { float: left; margin-top: 60px; margin-left: 40px; width: 390px; }
+        #nav { float: left; margin-top: 60px; margin-left: 40px; }
             #nav ul { list-style: none; margin: 0; }
             #nav li { float: left; }
             #nav li a { color: #89949B; font-family: helvetica; display: block; padding: 8px 15px; text-decoration: none; 
