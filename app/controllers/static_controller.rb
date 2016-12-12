@@ -8,10 +8,10 @@ class StaticController < ApplicationController
   def letstalk
   end
   
-  def works
+  def portfolio   
   end
   
-  def works_es
+  def portfolio_es
   end
   
   def services
