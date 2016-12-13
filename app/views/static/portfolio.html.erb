@@ -5,62 +5,97 @@
         <div id="content" class="clearfix">
             
             <div class="careers-title work">
-                <li><img src="img/developing.png"> Estamos desarrollando </li>
+                <li><img src="img/developing.png"> Our works </li>
             </div>
                 
             <div id="portfolio">
                 <div class="portfolio-item">
-                    <img class="portfolio-thumbnail" src="img/work.png" />
+                    <div class="thumbnail-container">
+                        <a href='#'>
+                            <div class="thumbnail-overlay"></div>
+                        </a>
+                        <img class="portfolio-thumbnail" src="img/work.png" />
+                    </div>
                     <div class="portfolio-caption">
                         <p class="portfolio-name">Turing</p>
                         <p class="portfolio-categories">Logo / Web Design</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img class="portfolio-thumbnail" src="img/work.png" />
+                    <div class="thumbnail-container">
+                        <%= link_to 'https://www.google.com.ar/' do %>
+                            <div class="thumbnail-overlay"></div>
+                        <% end %>
+                        <img class="portfolio-thumbnail" src="img/work.png" />
+                    </div>
                     <div class="portfolio-caption">
                         <p class="portfolio-name">Turing</p>
                         <p class="portfolio-categories">Logo / Web Design</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img class="portfolio-thumbnail" src="img/work.png" />
+                    <div class="thumbnail-container">
+                        <div class="thumbnail-overlay"></div>
+                        <img class="portfolio-thumbnail" src="img/work.png" />
+                    </div>
                     <div class="portfolio-caption">
                         <p class="portfolio-name">Turing</p>
                         <p class="portfolio-categories">Logo / Web Design</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img class="portfolio-thumbnail" src="img/work.png" />
+                    <div class="thumbnail-container">
+                        <div class="thumbnail-overlay"></div>
+                        <img class="portfolio-thumbnail" src="img/work.png" />
+                    </div>
                     <div class="portfolio-caption">
                         <p class="portfolio-name">Turing</p>
                         <p class="portfolio-categories">Logo / Web Design</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img class="portfolio-thumbnail" src="img/work.png" />
+                    <div class="thumbnail-container">
+                        <div class="thumbnail-overlay"></div>
+                        <a href='www.google.com'><img class="portfolio-thumbnail" src="img/work.png" /></a>
+                    </div>
                     <div class="portfolio-caption">
                         <p class="portfolio-name">Turing</p>
                         <p class="portfolio-categories">Logo / Web Design</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img class="portfolio-thumbnail" src="img/work.png" />
+                    <div class="thumbnail-container">
+                        <div class="thumbnail-overlay"></div>
+                        <img class="portfolio-thumbnail" src="img/work.png" />
+                    </div>
                     <div class="portfolio-caption">
                         <p class="portfolio-name">Turing</p>
                         <p class="portfolio-categories">Logo / Web Design</p>
                     </div>
                 </div>
             </div><!-- end portfolio -->
-
+        
+        
         </div><!-- end content -->
         
-        
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        
     </body>
 
