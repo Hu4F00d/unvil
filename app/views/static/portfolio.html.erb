@@ -1,82 +1,183 @@
 
-    <body>
+	<div class="container-portfolio">
+        <div class="careers-title work">
+            <li><img src="img/developing.png"> Nuestros desarrollos </li>
+        </div>
+		<ul id="filters" class="clearfix">
+			<li><span class="filter active" data-filter=".all">All</span></li>
+			<li><span class="filter" data-filter=".app">App</span></li>
+			<li><span class="filter" data-filter=".card">Card</span></li>
+			<li><span class="filter" data-filter=".logo">Logo</span></li>
+			<li><span class="filter" data-filter=".web">Web</span></li>
+		</ul>
 
-        <!-- CONTENT -->
-        <div id="content" class="clearfix">
-            
-            <div class="careers-title work">
-                <li><img src="img/developing.png"> Our works </li>
-            </div>
-                
-            <div id="portfolio">
-                <div class="portfolio-item">
-                    <div class="thumbnail-container">
-                        <a href='#'>
-                            <div class="thumbnail-overlay"></div>
-                        </a>
-                        <img class="portfolio-thumbnail" src="img/work.png" />
-                    </div>
-                    <div class="portfolio-caption">
-                        <p class="portfolio-name">Turing</p>
-                        <p class="portfolio-categories">Logo / Web Design</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="thumbnail-container">
-                        <%= link_to 'https://www.google.com.ar/' do %>
-                            <div class="thumbnail-overlay"></div>
-                        <% end %>
-                        <img class="portfolio-thumbnail" src="img/work.png" />
-                    </div>
-                    <div class="portfolio-caption">
-                        <p class="portfolio-name">Turing</p>
-                        <p class="portfolio-categories">Logo / Web Design</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="thumbnail-container">
-                        <div class="thumbnail-overlay"></div>
-                        <img class="portfolio-thumbnail" src="img/work.png" />
-                    </div>
-                    <div class="portfolio-caption">
-                        <p class="portfolio-name">Turing</p>
-                        <p class="portfolio-categories">Logo / Web Design</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="thumbnail-container">
-                        <div class="thumbnail-overlay"></div>
-                        <img class="portfolio-thumbnail" src="img/work.png" />
-                    </div>
-                    <div class="portfolio-caption">
-                        <p class="portfolio-name">Turing</p>
-                        <p class="portfolio-categories">Logo / Web Design</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="thumbnail-container">
-                        <div class="thumbnail-overlay"></div>
-                        <a href='www.google.com'><img class="portfolio-thumbnail" src="img/work.png" /></a>
-                    </div>
-                    <div class="portfolio-caption">
-                        <p class="portfolio-name">Turing</p>
-                        <p class="portfolio-categories">Logo / Web Design</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="thumbnail-container">
-                        <div class="thumbnail-overlay"></div>
-                        <img class="portfolio-thumbnail" src="img/work.png" />
-                    </div>
-                    <div class="portfolio-caption">
-                        <p class="portfolio-name">Turing</p>
-                        <p class="portfolio-categories">Logo / Web Design</p>
-                    </div>
-                </div>
-            </div><!-- end portfolio -->
-        
-        
-        </div><!-- end content -->
+		<div id="portfoliolist">
+			
+			<div class="portfolio logo all" data-cat="logo">
+				<div class="portfolio-wrapper">				
+					<img src="img/work.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Bird Document</a>
+							<span class="text-category">Logo</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>				
+
+			<div class="portfolio app all" data-cat="app">
+				<div class="portfolio-wrapper">			
+					<img src="img/work.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Visual Infography</a>
+							<span class="text-category">APP</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+			
+			<div class="portfolio web all" data-cat="web">
+				<div class="portfolio-wrapper">						
+					<img src="img/work.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Sonor's Design</a>
+							<span class="text-category">Web design</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>				
+			
+			<div class="portfolio card all" data-cat="card">
+				<div class="portfolio-wrapper">			
+					<img src="img/work.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Typography Company</a>
+							<span class="text-category">Business card</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+						
+			<div class="portfolio app all" data-cat="app">
+				<div class="portfolio-wrapper">
+					<img src="img/work.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Weatherette</a>
+							<span class="text-category">APP</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>			
+			
+			<div class="portfolio card all" data-cat="card">
+				<div class="portfolio-wrapper">			
+					<img src="img/work.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">BMF</a>
+							<span class="text-category">Business card</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+			
+			<div class="portfolio card all" data-cat="card">
+				<div class="portfolio-wrapper">			
+					<img src="img/work.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Techlion</a>
+							<span class="text-category">Business card</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+			
+			<div class="portfolio logo all" data-cat="logo">
+				<div class="portfolio-wrapper">			
+					<img src="img/work.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">KittyPic</a>
+							<span class="text-category">Logo</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>																																							
+			
+			<div class="portfolio app all" data-cat="app">
+				<div class="portfolio-wrapper">			
+					<img src="img/work.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Graph Plotting</a>
+							<span class="text-category">APP</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>														
+			
+			<div class="portfolio card all" data-cat="card">
+				<div class="portfolio-wrapper">			
+					<img src="img/work.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">QR Quick Response</a>
+							<span class="text-category">Business card</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>				
+
+			<div class="portfolio logo all" data-cat="logo">
+				<div class="portfolio-wrapper">			
+					<img src="img/work.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Mobi Sock</a>
+							<span class="text-category">Logo</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>																	
+
+			<div class="portfolio logo all" data-cat="logo">
+				<div class="portfolio-wrapper">			
+					<img src="img/work.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Village Community Church</a>
+							<span class="text-category">Logo</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>													
+			
+			
+		</div>
+		<!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" data-key='bp'>
+          Launch demo modal bp
+        </button>
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" data-key='turing'>
+          Launch demo modal turing
+        </button>        
         
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -87,7 +188,7 @@
                 <h4 class="modal-title" id="myModalLabel">Modal title</h4>
               </div>
               <div class="modal-body">
-                ...
+                <img src='img/work.png' />
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -96,6 +197,6 @@
             </div>
           </div>
         </div>
+	</div><!-- container -->
 
-    </body>
 

@@ -1,3 +1,15 @@
+@media (max-width:980px){
+    .postulate {
+    margin:0 0 0 3%;
+    }
+	.container-portfolio {
+		width: 768px; 
+	}  
+	.careers-box {
+	width:48%;
+	}
+}
+
 @media (max-width:900px) {
     #content-brand {
     text-align: center;
@@ -42,6 +54,64 @@
     }
 }
 
+
+
+@media (max-width:850px){
+    .index-info {
+    width: 100%;
+    text-align: center;
+    }
+    .box1 {
+    text-align:center;
+    width:100%;
+    }
+    .box1 h3 {
+    font-size:2.4rem;
+    }
+    .box1 p {
+    font-size:1.2rem;
+    }
+    .da-slide .da-img:not(.small-img) {
+    width:20%;
+    margin-left:10%;
+    }
+    .da-slide h2 {
+    font-size:2.4rem;
+    }
+    .careers-box h3 {
+    font-size:1.3rem;
+    }
+    .careers-box p {
+    line-height: 1.5;
+    font-size: 0.9rem;
+    }
+}
+
+@media (max-width:780px) {
+    .job-list li {
+    font-size: 0.8rem;
+    padding: 2px 0;
+    }
+    .title-sky, .title-violet {
+    font-size: 1rem;
+    }
+	.container-portfolio {
+		width: 70%;
+		margin-top: 0px;
+	}
+	#portfoliolist .portfolio {
+		width: 48%;
+		margin:1%;
+	}	
+	#filters {
+	    margin-bottom: 3%;
+	}
+    	#filters li {
+            float: left;
+            width: 20%;
+            text-align: center;
+        }
+}
 @media (max-width:740px) {
     #idioma {
     position:absolute;
@@ -49,6 +119,57 @@
     }
     #slogan {
     font-size:2.5rem;
+    }
+}
+
+@media (max-width:691px) {
+    .container-boxes {
+    justify-content: space-between;
+    }
+    .careers-box{
+    width:45%;
+    }
+    .careers-box h3 {
+    font-size:1.2rem;
+    }
+    .careers-box p {
+    font-size: 0.8rem;
+    }
+    .careers-box-left{
+    width: 70%;
+    align-items: center;
+    }
+    .careers-box-right{
+    width:30%;
+    }
+    .careers-box-right img {
+    margin-top: 20%;
+    width: 80%;
+    }
+}
+
+@media (max-width:653px) {
+    .title-sky, .title-violet {
+    font-size: 0.9rem;
+    }
+	#portfoliolist .portfolio {
+        width: 90%;
+        margin: 1% 5%;
+	}    
+}
+
+@media (max-width:590px) {
+    #content-wanted{
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 4% 0 4% 0;
+    }
+    .wanted{
+    width: 45%;
+    }
+    #jobs-container {
+    width: 100%;
+    margin-top:3%;
     }
 }
 @media (max-width:580px) {
@@ -73,6 +194,10 @@
     #slogan {
     font-size:1.8rem;
     }
+  	.careers-title.work {
+        font-size: 22px;
+        text-align: center;
+    }	      
 }
 
 @media (max-width:560px) {
@@ -88,5 +213,39 @@
     .social-net {margin:0;}
     .social-net h3 {
     font-size: 0.8rem;
+    }
+    .da-slide h2 {
+    font-size:2.1rem;
+    }
+    .da-slide p {
+    font-size:1.2rem;
+    }
+    .container-portfolio {
+        margin-top: 0;
+    }    
+}
+@media (max-width:480px) {
+    .container-boxes {
+    justify-content: center;
+    }
+	.container-portfolio { 
+		width: 95%; 
+	}	
+	.careers-title.work {
+        text-align: center;
+    }
+    #filters li {
+        width: 20%;
+        text-align: center;
+    }  
+    .careers-box {
+    width: 80%;
+    margin: 6% 1%;
+    }
+    
+}
+@media (max-width:400px){
+    #slogan {
+    font-size:1.6rem;
     }
 }

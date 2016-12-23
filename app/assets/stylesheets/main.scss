@@ -19,6 +19,7 @@ textarea { resize: vertical; }
 
 .main {
     width: 90%;
+    min-height: 600px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -54,7 +55,7 @@ textarea { resize: vertical; }
    ========================================================================== */
 #header { width: 100%; display: flex; justify-content: space-around;}
     #figure { float: left; height: 93px; margin-top: 30px; width: 250px; }
-    #nav { float: left; margin-top: 60px; margin-left: 40px; }
+    #nav {margin-top: 60px; margin-left: 40px; }
         #nav ul { list-style: none; margin: 0; }
         #nav li { float: left; }
         #nav li a { color: #89949B; font-family: helvetica; display: block; padding: 8px 15px; text-decoration: none; 
@@ -98,16 +99,16 @@ textarea { resize: vertical; }
 /* ==========================================================================
    CONTENT
    ========================================================================== */
-#content { margin: 0 auto; min-height: 600px; margin-bottom: 70px;}
+#content { width: 100%; margin: 0 auto; min-height: 600px; margin-bottom: 70px;}
     #slider { height: 400px; width: 100%; margin: 10px 0 80px 0;}
 
     .box1 { float: left; margin-left: 0 !important; }
-    .box1 h3 { color: #6db2df; font-size: 45px; }
-    .box1 p { color: #89949b;  font-family: helvetica; font-size: 21px; line-height: 1.5; }
-    .imagen { background-color: #ccc; float: left; height: auto; width: auto; }
+    .box1 h3 { color: #6db2df; font-size: 2.6rem; }
+    .box1 p { color: #89949b;  font-family: helvetica; font-size: 1.3rem; line-height: 1.5; }
+    .imagen { float: left; height: auto; width: auto; }
 
     #content-info {margin: 80px 0 30px 0;display: flex;flex-wrap: wrap;width: 100%;justify-content: space-around;}
-        .index-info {width: 318px;margin: 2%;}
+        .index-info {width: 26%;margin-bottom: 8%;}
             .index-info h3 { font-size: 30px; font-family: "HelveticaNeueLTStd-Bd"; }
             .index-info p { color: #89949b; font-size: 17px; line-height: 1.5; }
             .index-info-img { margin-top: 15px; text-align: center; }
@@ -120,32 +121,34 @@ textarea { resize: vertical; }
         .color-green { color: #62CCB8; }
 
 /* CAREERS */
+
 .careers-title { color: #4E6D7C; font-family: "HelveticaNeueLTStd-Bd"; font-size: 30px; list-style: none; margin-top: 30px; }
     .careers { border-bottom: 1px solid #e6e6e6; margin: 20px 0 50px 0; padding-bottom: 30px; }
         .box-dialog { background-color: #f2f2f2; border-radius: 10px; border: 5px solid #e6e6e6; }
         .box-dialog p { color: #4E6D7C; font-family: "HelveticaNeueLTStd-Bd"; font-size: 32px; line-height: 1.1; padding: 16px 0 16px 30px; }
         .careers-arrow { background: url(../img/careers-arrow.png); background-repeat: no-repeat; height: 37px; position: absolute; margin-top: 60px; margin-left: -25px; width: 31px; z-index: 50; }
 
-    .careers-work h2 { color: #4E6D7C; margin-bottom: 40px; font-size: 40px; }
-    .container-boxes { margin-left: 80px; width: 880px; }
-        .careers-box { float: left; margin: 0 20px 20px 0; width: 420px; }
-            .careers-box h3 { font-size: 25px; line-height: 1.1; font-family: "HelveticaNeueLTStd-Bd"; }
-            .careers-box p { color: #89949B; line-height: 1.2; font-size: 20px; }
-                .careers-box-left { float: left; width: 268px; }
-                .careers-box-right { float: left; margin-left: 20px; }
-                .careers-box-right img { margin-top: 0px; }
+.careers-work {display: flex; flex-wrap: wrap;}
+    .careers-work h2 { color: #4E6D7C; margin-bottom: 40px; font-size: 2.5rem; }
+    .container-boxes { display: flex;flex-wrap: wrap;justify-content: center; margin-bottom: 5%;}
+        .careers-box { margin: 3% 1%; width: 43%; display: flex;flex-wrap: wrap;justify-content: space-between; }
+            .careers-box h3 { font-size: 1.6rem; line-height: 1.1; font-family: "HelveticaNeueLTStd-Bd"; width: 100%; height: 25%;}
+            .careers-box p { color: #89949B; line-height: 1.2; font-size: 1.1rem; margin:0;}
+                .careers-box-left { width: 50%;display: flex;align-items: flex-start;}
+                .careers-box-right {width: 45%; text-align: center; }
+                .careers-box-right img { margin-top: 0px; padding: 9%;}
 
-#content-wanted { border-top: 1px solid #E6E6E6; border-bottom: 1px solid #E6E6E6; margin: 20px 0; padding: 20px; }
+#content-wanted { border-top: 1px solid #E6E6E6; border-bottom: 1px solid #E6E6E6; margin: 2% 0; padding: 2%; display: flex; justify-content: space-between; }
     .wanted { float: left; }
-    #jobs-container { float: left; margin: 15px 0 0 60px; width: 650px; }
-        .postulate { background-color: #F2F2F2; border-radius: 10px; border: 5px solid #E6E6E6; float: left; min-height: 280px; margin: 0 10px; padding: 10px; width: 260px; }
+    #jobs-container { display: flex; flex-wrap: nowrap; justify-content: flex-end; }
+        .postulate { background-color: #F2F2F2; border-radius: 10px; border: 5px solid #E6E6E6; margin: 0 3%; padding: 2%; }
         .postulate h3 { padding: 0 0 5px 0; margin: 0 0 5px 0; }
         ul.job-list { list-style: none; }
-        .job-list li { color: #89949B; font-size: 16px; padding: 5px 0; }
+        .job-list li { color: #89949B; font-size: 1rem; padding: 5px 0; }
 
         .img-list { margin-right: 5px; }
-        .title-sky, .title-violet { background: url(../img/line-h.png); background-position: bottom; background-repeat: repeat-x; color: #30BEDA; font-size: 22px;
-                                    text-align: center; width: 255px; }
+        .title-sky, .title-violet { background: url(../img/line-h.png); background-position: bottom; background-repeat: repeat-x; color: #30BEDA; font-size: 1.2rem;
+                                    text-align: center; width: 100%; }
         .title-violet { color: #6184D0; }
 
         .btn-job-dev, .btn-job { border: 0; color: #fff; float: right; margin: 15px 20px 0 0; font-size: 18px; padding: 7px 15px; }
@@ -196,7 +199,7 @@ textarea { resize: vertical; }
 .careers-title.work {
     margin-bottom: 30px;
 }
-#portfolio {
+#portfolio-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -300,3 +303,140 @@ textarea { resize: vertical; }
 .clearfix:after { content: " "; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { *zoom: 1; }
+
+
+.container-portfolio { 
+	position: relative; 
+	width: 960px; 
+	min-height: 100vh;
+	margin: 30px auto 60px auto; 
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;	
+}
+ 
+#filters {
+	margin:1%;
+	padding:0;
+	list-style:none;
+}
+
+	#filters li {
+		float:left;
+	}
+	
+	#filters li span {
+		display: block;
+		padding:5px 20px;		
+		text-decoration:none;
+		color:#666;
+		cursor: pointer;
+	}
+	
+	#filters li span.active {
+		background: #6184d0;
+		color:#fff;
+	}
+ 
+
+ 
+#portfoliolist .portfolio {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	width:31%;
+	margin:1%;
+	display:none;
+	float:left;
+	overflow:hidden;
+}
+
+	.portfolio-wrapper {
+		overflow:hidden;
+		position: relative !important;
+		background: #666;
+		cursor:pointer;
+	}
+
+	.portfolio img {
+		width:100%;
+		position: relative;
+		top:0;
+    -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition:         all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);		
+	}
+	
+	.portfolio .label {
+		position: absolute;
+		width: 100%;
+		height:40px;
+		bottom:-40px;
+    -webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition:         all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+	}
+
+		.portfolio .label-bg {
+			background: #6184d0;
+			width: 100%;
+			height:100%;
+			position: absolute;
+			top:0;
+			left:0;
+		}
+	
+		.portfolio .label-text {
+			color:#fff;
+			position: relative;
+			z-index:500;
+			padding:5px 8px;
+		}
+		
+		.portfolio .label-text a {
+			color:#fff;
+			font-size: 13px;
+		}
+			
+			.portfolio .text-category {
+				display:block;
+				font-size:11px;
+			}
+	
+	.portfolio:hover .label {
+    bottom:0;
+  }
+	.portfolio:hover img {
+    top:-30px;
+  }  
+
+
+/* #Clearing */
+
+/* Self Clearing Goodness */
+.container-portfolio:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+.row:after,
+.clearfix:after {
+  clear: both; }
+.row,
+.clearfix {
+  zoom: 1; }
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
