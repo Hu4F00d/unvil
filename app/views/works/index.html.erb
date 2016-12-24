@@ -47,9 +47,6 @@
                 <h1 class='work-name'></h1> 
                 <p class='work-description'></p>
                 <div class='portfolio-item-image-list'>
-                    <img class='portfolio-item-image' src='img/work.png' />
-                    <img class='portfolio-item-image' src='img/work.png' />
-                    <img class='portfolio-item-image' src='img/work.png' />
                 </div>
               </div>
               <div class="modal-footer">
@@ -65,11 +62,25 @@
                 var works = <%= raw @works.to_json %> // Turn Ruby array into JS array
                 var work_id = button.data('key') - 1 // Select the relevant work id
                 var work = works[work_id]; // Find the relevant work data in the array
+                var images = JSON.parse(work.images);
                 
                 var modal = $(this) // Select the modal we're updating
                 
                 modal.find('.work-description').text(work.description);
                 modal.find('.work-name').text(work.name);
+                
+                var imageList = modal.find('.portfolio-item-image-list');
+                
+                images.forEach(function(element) {
+                   imageList.append('<img src="' + element + '" />'); 
+                });
+                
+	        })
+	        
+	        $('.bs-modal-lg').on('hide.bs.modal', function (event) {
+	            var modal = $(this) // Select the modal we're updating
+                
+                modal.find('.portfolio-item-image-list').empty();
 	        })
         })
 	</script>

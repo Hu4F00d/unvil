@@ -8,5 +8,5 @@
 
 
 12.times do |i|
-  Work.create(name: "Work Number ##{i}", description: "This is a product we worked on. This is a product we worked on.", image: 'img/work.png')
+  Work.create(name: "Work Number ##{i}", description: "This is a product we worked on. This is a product we worked on.", image: 'img/work.png', images:'["img/work.png", "img/work.png", "img/work.png"]')
 end
