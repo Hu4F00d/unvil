@@ -17,17 +17,17 @@
 </head>
 <body>
   <% if params[:action] == "index" || params[:action] == "careers" || params[:action] == "portfolio"%>
-    <%= render 'header'  %>
+    <%= render 'layouts/header'  %>
       <div class='main clearfix'>
         <%= yield %>  
       </div>
-    <%= render 'footer'  %>
+    <%= render 'layouts/footer'  %>
   <% else %>
-    <%= render 'header_es'  %>
+    <%= render 'layouts/header_es'  %>
       <div class='main clearfix'>
         <%= yield %>  
       </div>  
-    <%= render 'footer_es'  %>
+    <%= render 'layouts/footer_es'  %>
   <% end %>
 </body>
 </html>

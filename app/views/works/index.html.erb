@@ -1,0 +1,77 @@
+
+	<div class="container-portfolio">
+        <div class="careers-title work">
+            <li><img src="img/developing.png"> Nuestros desarrollos </li>
+        </div>
+        
+		<ul id="filters" class="clearfix">
+			<li><span class="filter active" data-filter=".all">All</span></li>
+			<li><span class="filter" data-filter=".app">App</span></li>
+			<li><span class="filter" data-filter=".card">Card</span></li>
+			<li><span class="filter" data-filter=".logo">Logo</span></li>
+			<li><span class="filter" data-filter=".web">Web</span></li>
+		</ul>
+
+            
+		<div id="portfoliolist">
+
+		    <% @works.each do |work| %>
+            	<div class="portfolio logo all" data-cat="logo" data-toggle="modal" data-target=".bs-modal-lg" data-key="<%= work.id %>">
+    				<div class="portfolio-wrapper">				
+    					<img src="<%= work.image %>" alt="" />
+    					<div class="label">
+    						<div class="label-text">
+    							<a class="text-title"><%= work.name %></a>
+    							<span class="text-category">Logo</span>
+    						</div>
+    						<div class="label-bg"></div>
+    					</div>
+    				</div>
+    			</div>	
+            <%end %>
+			
+		</div>
+        
+    </div>
+                
+        <div class="modal fade bs-modal-lg modal-lg" tabindex="-1" aria-labelledby="myLargeModalLabel">
+          <div class="modal-dialog"  role="dialog" >
+            <div class="modal-content" role='document'>
+            
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Portfolio Item</h4>
+              </div>
+              <div class="modal-body">
+                
+                <h1 class='work-name'></h1> 
+                <p class='work-description'></p>
+                <div class='portfolio-item-image-list'>
+                    <img class='portfolio-item-image' src='img/work.png' />
+                    <img class='portfolio-item-image' src='img/work.png' />
+                    <img class='portfolio-item-image' src='img/work.png' />
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div> 
+	
+	
+	<script type='text/javascript'>
+	    $(document).ready(function() {
+      	    $('.bs-modal-lg').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget) // Button that triggered the modal
+                var works = <%= raw @works.to_json %> // Turn Ruby array into JS array
+                var work_id = button.data('key') - 1 // Select the relevant work id
+                var work = works[work_id]; // Find the relevant work data in the array
+                
+                var modal = $(this) // Select the modal we're updating
+                
+                modal.find('.work-description').text(work.description);
+                modal.find('.work-name').text(work.name);
+	        })
+        })
+	</script>
+
+

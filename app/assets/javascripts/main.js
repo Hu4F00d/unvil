@@ -12,6 +12,7 @@ $(document).ready(function() {
       console.log("hide");
     })      
     
+    
 })   
     
   // Portfolio JS

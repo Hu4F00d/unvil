@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+12.times do |i|
+  Work.create(name: "Work Number ##{i}", description: "This is a product we worked on. This is a product we worked on.", image: 'img/work.png')
+end
