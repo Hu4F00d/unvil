@@ -1,3 +1,9 @@
+@media (max-width:1124px) {
+    .box-dialog p {
+    font-size: 1.6rem;
+    }
+}
+
 @media (max-width:980px){
     .postulate {
     margin:0 0 0 3%;
@@ -8,6 +14,9 @@
 	.careers-box {
 	width:48%;
 	}
+	.box-dialog p {
+    font-size: 1.3rem;
+    }
 }
 
 @media (max-width:900px) {
@@ -85,6 +94,9 @@
     line-height: 1.5;
     font-size: 0.9rem;
     }
+    .careers-work h2 {
+    font-size: 2.2rem;
+}
 }
 
 @media (max-width:780px) {
@@ -106,11 +118,14 @@
 	#filters {
 	    margin-bottom: 3%;
 	}
-    	#filters li {
-            float: left;
-            width: 20%;
-            text-align: center;
-        }
+	#filters li {
+        float: left;
+        width: 20%;
+        text-align: center;
+    }
+    .box-dialog p {
+    font-size: 1.2rem;
+    }
 }
 @media (max-width:740px) {
     #idioma {
@@ -145,6 +160,9 @@
     .careers-box-right img {
     margin-top: 20%;
     width: 80%;
+    }
+    .careers-work h2 {
+    font-size: 1.7rem;
     }
 }
 
@@ -241,6 +259,9 @@
     .careers-box {
     width: 80%;
     margin: 6% 1%;
+    }
+    .careers-work h2 {
+    font-size: 1.5rem;
     }
     
 }

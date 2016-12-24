@@ -13,7 +13,7 @@
 
 		<div id="portfoliolist">
 			
-			<div class="portfolio logo all" data-cat="logo">
+			<div class="portfolio logo all" data-cat="logo" data-toggle="modal" data-target=".bs-modal-lg">
 				<div class="portfolio-wrapper">				
 					<img src="img/work.png" alt="" />
 					<div class="label">
@@ -26,7 +26,7 @@
 				</div>
 			</div>				
 
-			<div class="portfolio app all" data-cat="app">
+			<div class="portfolio app all" data-cat="app"  data-toggle="modal" data-target=".bs-modal-lg">
 				<div class="portfolio-wrapper">			
 					<img src="img/work.png" alt="" />
 					<div class="label">
@@ -171,32 +171,38 @@
 			
 			
 		</div>
-		<!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" data-key='bp'>
-          Launch demo modal bp
-        </button>
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" data-key='turing'>
-          Launch demo modal turing
-        </button>        
         
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
+          </div>
+        </div>
+                
+        <div class="modal fade bs-modal-lg modal-lg" tabindex="-1" aria-labelledby="myLargeModalLabel">
+          <div class="modal-dialog"  role="dialog" >
+            <div class="modal-content" role='document'>
+            
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                <h4 class="modal-title" id="myModalLabel">Portfolio Item</h4>
               </div>
               <div class="modal-body">
-                <img src='img/work.png' />
+                
+                <h1 class='portfolio-item-title'>Super Work</h1> 
+                <p>This is the description to the work that we did. This is the description to the work that we did. This is the description to the work that we did.
+                   This is the description to the work that we did. This is the description to the work that we did.</p>
+                <div class='portfolio-item-image-list'>
+                    <img class='portfolio-item-image' src='img/work.png' />
+                    <img class='portfolio-item-image' src='img/work.png' />
+                    <img class='portfolio-item-image' src='img/work.png' />
+                </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
               </div>
-            </div>
-          </div>
-        </div>
+            </div> 
 	</div><!-- container -->
+	
+	
+	
+	
+	
 
 

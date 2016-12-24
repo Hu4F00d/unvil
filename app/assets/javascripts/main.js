@@ -10,9 +10,10 @@ $(document).ready(function() {
     })
     $('#myModal').on('hide.bs.modal', function () {
       console.log("hide");
-    })      				
-})
-
+    })      
+    
+})   
+    
   // Portfolio JS
   
 	$(function () {
