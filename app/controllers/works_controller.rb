@@ -4,6 +4,7 @@ class WorksController < ApplicationController
       end
       
       def index_es
+            @works = Work.all
       end
       
 end

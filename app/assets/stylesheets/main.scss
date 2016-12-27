@@ -18,7 +18,7 @@ textarea { resize: vertical; }
 .chromeframe { margin: 0.2em 0; background: #ccc; color: #000; padding: 0.2em 0; }
 
 .main {
-    width: 90%;
+    width: 86%;
     min-height: 600px;
     margin: auto;
     display: flex;
@@ -53,8 +53,9 @@ textarea { resize: vertical; }
 /* ==========================================================================
    HEADER
    ========================================================================== */
-#header { width: 100%; display: flex; justify-content: space-around;}
-    #figure { float: left; height: 93px; margin-top: 30px; width: 250px; }
+#header { width: 100%; display: flex;}
+    #figure { height: 93px; margin-top: 30px; width: 250px; }
+    #figure-nav {display: flex; width: 86%; margin: auto;}
     #nav {margin-top: 60px; margin-left: 40px; }
         #nav ul { list-style: none; margin: 0; }
         #nav li { float: left; }
@@ -71,7 +72,7 @@ textarea { resize: vertical; }
         #nav li a:active { background-color: #959BA0; color: #fff; }
         .activado { background-color: #959BA0; color: #fff !important; }
 
-    #idioma { background-color: orange; float: right; height: 30px; position: relative; width: 60px; z-index: 50; }
+    #idioma { background-color: orange; height: 30px; position: absolute; width: 60px; z-index: 50; right:7%;}
         .language { background-color: #BBBDBF; cursor: pointer; display: block; float: left; height: 30px; text-align: center; width: 30px;
                     -webkit-transition: all .3s ease-in-out;
                     -moz-transition: all .3s ease-in-out;
@@ -119,13 +120,14 @@ textarea { resize: vertical; }
         .color-bluegrey { color: #4E6D7C; }
         .color-cian { color: #30BEDA; }
         .color-green { color: #62CCB8; }
-
+        
+    .span5 {width:359px;}
 /* CAREERS */
 
 .span7 {width:58%;}
 .span3 {width:23.5%;}
 
-.careers-title { color: #4E6D7C; font-family: "HelveticaNeueLTStd-Bd"; font-size: 30px; list-style: none; margin-top: 7%;}
+.careers-title { color: #4E6D7C; font-family: "HelveticaNeueLTStd-Bd"; font-size: 1.9rem; list-style: none; margin-top: 7%;}
     .careers { border-bottom: 1px solid #e6e6e6; margin: 20px 0 50px 0; padding-bottom: 30px; display: flex; justify-content: center;}
         .box-dialog { background-color: #f2f2f2; border-radius: 10px; border: 5px solid #e6e6e6; }
         .box-dialog p { color: #4E6D7C; font-family: "HelveticaNeueLTStd-Bd"; font-size: 1.7rem; line-height: 1.5; margin: 0; padding: 4% 2% 4% 8%;}
@@ -254,16 +256,17 @@ textarea { resize: vertical; }
    ========================================================================== */
 #footer { background: url(../img/bg-footer.png);height: 329px;width: 100%; display: flex; flex-wrap: wrap; justify-content: space-around; }
     #slogan {color: #fff;height: 100px;font-family: "HelveticaNeueLTStd-Bd";font-size: 50px;text-shadow: 2px 3px #1c2428;width: 100%;display: flex;justify-content: center;align-items: center;}
+    #footer-content {width:86%;}
     #content-foot-data { float: left; }
-        #content-brand { float: left; margin-right: 20px; text-align: center; width: 400px; }
+        #content-brand { float: left; text-align: center; width: 400px; }
             #brand { background: url(../img/line-dark-h.png); background-repeat: repeat-x; background-position: bottom; float: left; padding-bottom: 20px; width: 290px; }
             #brand-below { float: left; color: #89949b; width: 100%; }
             #brand-below p { float: left; margin: 10px 0 0 20px; }
             #brand-below a { color: #89949b; float: left; margin: 10px 0 10px 10px; }
             #brand-below a:hover { color: #fff; }
 
-        .foot-box { float: right; margin-right: 0px; width: 140px; }
-
+        .foot-box { float: right; margin-right: 0px;}
+            .foot-box-nav {margin-right:10%;}
             .foot-nav ul { list-style: none; }
             .foot-nav li {  background: url(../img/line-dark-h.png); background-repeat: repeat-x; background-position: bottom; padding: 11px 0 6px 0; }
             .foot-nav li a { color: #89949b; font-size: 18px; text-shadow: 1px 1px #151c1e; 
@@ -343,6 +346,10 @@ textarea { resize: vertical; }
 	}
  
 
+#portfoliolist {
+    display: flex;
+    flex-wrap: wrap;
+}
  
 #portfoliolist .portfolio {
 	-webkit-box-sizing: border-box;
@@ -351,7 +358,6 @@ textarea { resize: vertical; }
 	width:31%;
 	margin:1%;
 	display:none;
-	float:left;
 	overflow:hidden;
 }
 
@@ -400,7 +406,7 @@ textarea { resize: vertical; }
 			font-size: 13px;
 		}
 			
-			.portfolio .text-category {
+			.portfolio .text-categories {
 				display:block;
 				font-size:11px;
 			}
@@ -448,18 +454,70 @@ textarea { resize: vertical; }
     Bootstrap Modal
    ========================================================================== */
 
-     .modal {
-         display: none;
-         left: 15%;
-         margin-left: 0;
-     }
-     
-     .modal-lg {
-         width: 70%;
-     }
-     
-     .portfolio-item-image {
-         width: 50%;
-         margin: 2% 25%;
-     }
-     
+.modal {
+    display: none;
+    left: 15%;
+    margin-left: 0;
+}
+.modal-lg {
+    width: 70%;
+}
+.modal-title {
+    font-size: 30px;
+    margin: 20px 0;
+    color: #6184d0;
+    font-weight: bolder;
+}
+.modal-header .close {
+    margin: 15px 0;
+    font-size: 25px;  
+    transition: 0.5s;
+    color: #37464f;
+    opacity: 0.5;
+}
+.modal-header .close:hover {
+    font-weight: bold;
+    color: #37464f;
+    transform: rotate(180deg) scale(1.1, 1.1);
+    opacity: 0.7;
+}
+.work-description {
+    color: #89949b;
+    font-size: 17px;
+    line-height: 1.5;
+    width: 90%;
+    margin: 30px auto 50px auto;
+}
+.portfolio-item-image-list {
+    margin: auto;
+    max-width: 90%;
+}
+.portfolio-item-image {
+    display: block;
+    margin: 0 auto 50px auto;
+}
+.blue-button {
+    background-color: #6184d0;
+    color: #f2f2f2;
+    font-weight: 500;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.blue-button:hover {
+    background-color: #5578c4;
+}
+.modal-body {
+    max-height: calc(100vh - 225px);
+    text-align: center;
+}
+.modal.fade.in {
+    top: 30px;
+}
+.modal a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+    padding-top: 14px;
+}

@@ -7,22 +7,22 @@
 		<ul id="filters" class="clearfix">
 			<li><span class="filter active" data-filter=".all">All</span></li>
 			<li><span class="filter" data-filter=".app">App</span></li>
-			<li><span class="filter" data-filter=".card">Card</span></li>
-			<li><span class="filter" data-filter=".logo">Logo</span></li>
-			<li><span class="filter" data-filter=".web">Web</span></li>
+			<li><span class="filter" data-filter=".bot">Bot</span></li>
+			<li><span class="filter" data-filter=".brand">Brand</span></li>
+			<li><span class="filter" data-filter=".website">Website</span></li>
 		</ul>
 
             
 		<div id="portfoliolist">
 
 		    <% @works.each do |work| %>
-            	<div class="portfolio logo all" data-cat="logo" data-toggle="modal" data-target=".bs-modal-lg" data-key="<%= work.id %>">
+            	<div class="portfolio all <%= JSON.parse(work.categories).join(' ') %>" data-cat="logo" data-toggle="modal" data-target=".bs-modal-lg" data-key="<%= work.id %>">
     				<div class="portfolio-wrapper">				
     					<img src="<%= work.image %>" alt="" />
     					<div class="label">
     						<div class="label-text">
     							<a class="text-title"><%= work.name %></a>
-    							<span class="text-category">Logo</span>
+    							<span class="text-categories"><%= JSON.parse(work.categories).join(' / ') %></span>
     						</div>
     						<div class="label-bg"></div>
     					</div>
@@ -44,15 +44,17 @@
               </div>
               <div class="modal-body">
                 
-                <h1 class='work-name'></h1> 
                 <p class='work-description'></p>
                 <div class='portfolio-item-image-list'>
                 </div>
+                
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="blue-button" data-dismiss="modal">Close</button>
               </div>
             </div> 
+        </div>
+      </div>  
 	
 	
 	<script type='text/javascript'>
@@ -67,13 +69,17 @@
                 var modal = $(this) // Select the modal we're updating
                 
                 modal.find('.work-description').text(work.description);
-                modal.find('.work-name').text(work.name);
+                modal.find('.modal-title').text(work.name);
                 
                 var imageList = modal.find('.portfolio-item-image-list');
                 
                 images.forEach(function(element) {
-                   imageList.append('<img src="' + element + '" />'); 
+                   imageList.append('<img src="' + element + '" class="portfolio-item-image"/>'); 
                 });
+                
+                if (work.link) {
+                  modal.find('.modal-body').append('<a href="' + work.link  + '" target="_blank" class="blue-button portfolio-item-link">Visit the Site</a>')
+                }
                 
 	        })
 	        
@@ -81,6 +87,7 @@
 	            var modal = $(this) // Select the modal we're updating
                 
                 modal.find('.portfolio-item-image-list').empty();
+                modal.find('.portfolio-item-link').remove();
 	        })
         })
 	</script>

@@ -1,22 +1,26 @@
  <!-- HEADER -->
         
         <div id="header">
-            <div id="figure">
-                <a href="/index_es"><img src="img/unvil-logo.png" Title="Unvil S.A. - Playground for the Minds"></a>
+            <div id="figure-nav">
+                <div id="figure">
+                    <a href="/index_es"><img src="img/unvil-logo.png" Title="Unvil S.A. - Playground for the Minds"></a>
+                </div>
+                <div id="nav">
+                    <ul> 
+                        <li><a href="index_es"  class="<%= 'activado' if params[:action] == 'index_es' && params[:controller] == 'static'%>">Inicio</a></li>
+                        <li><a href="portfolio_es" class="<%= 'activado' if params[:controller] == 'works' %>">Portafolio</a></li>
+                        <li><a href="careers_es" class="<%= 'activado' if params[:action] == 'careers_es' %>">Estamos Contratando</a></li>
+                    </ul>
+                </div><!-- end nav -->
             </div>
-            <div id="nav">
-                <ul> 
-                    <li><a href="index_es"  class="<%= 'activado' if params[:action] == 'index_es' %>">Inicio</a></li>
-                    <li><a href="portfolio_es" class="<%= 'activado' if params[:action] == 'portfolio_es' %>">Portafolio</a></li>
-                    <li><a href="careers_es" class="<%= 'activado' if params[:action] == 'careers_es' %>">Estamos Contratando</a></li>
-                </ul>
-            </div><!-- end nav -->
             <div id="idioma">
                 <div class="language">
-                   <a href= "<%= '/' if params[:action] == 'index_es'%><%= 'careers' if params[:action] == 'careers_es' %> <%= 'portfolio' if params[:action] == 'portfolio_es'%>" title="English">En</a>
+                   <a href= "<% if params[:controller] == 'works'%><%= 'portfolio' %><% end %>
+                             <% if params[:controller] == 'static' %><%= 'careers' if params[:action] == 'careers_es'%><%= '/' if params[:action] == 'index_es'%><% end %>" title="English">En</a>
                 </div>
                 <div class="language">
                    <a href="/es" class="language-active" title="Español">Es</a>
                 </div>
             </div>
         </div><!-- end header -->
+        

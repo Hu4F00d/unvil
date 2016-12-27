@@ -17,26 +17,25 @@
 	.box-dialog p {
     font-size: 1.3rem;
     }
+    .span3 {
+    display: flex;
+    align-items: center;
+    }
 }
 
 @media (max-width:900px) {
     #content-brand {
     text-align: center;
     width: 30%;
-    margin-left: 5%;
-    align-self: flex-start;
     }
     #brand {
     width: auto;
     }
     #brand-below {
     font-size: 0.7rem;
-    }
-    .foot-box {
-    float: right;
-    margin-right: 0px;
-    width: 17%;
-    align-self: flex-start;
+        p {
+            margin-left: 10px;
+        }
     }
     .social-net {
     text-align: center;
@@ -60,6 +59,15 @@
     }
     .foot-nav li a {
     font-size: 1rem;
+    }
+    .span5 {
+    width: 247px;
+    }
+    .modal-lg {
+        width: 90%;
+    }
+    .modal {
+        left: 5%;
     }
 }
 
@@ -96,7 +104,10 @@
     }
     .careers-work h2 {
     font-size: 2.2rem;
-}
+    }
+    .careers {
+    justify-content: space-between;
+    }
 }
 
 @media (max-width:780px) {
@@ -164,6 +175,12 @@
     .careers-work h2 {
     font-size: 1.7rem;
     }
+    .careers-title {
+    font-size: 1.6rem;
+    }
+    .careers-title * img {
+    width: 45px;
+    }
 }
 
 @media (max-width:653px) {
@@ -173,7 +190,13 @@
 	#portfoliolist .portfolio {
         width: 90%;
         margin: 1% 5%;
-	}    
+	}  
+	#nav {
+	margin-top: 7%;
+	}
+	#figure {
+	width: 25%;
+	}
 }
 
 @media (max-width:590px) {
@@ -191,17 +214,6 @@
     }
 }
 @media (max-width:580px) {
-    #nav {
-    float: none; 
-    margin-top: 0; 
-    margin-left: 0;
-    margin: 6%;
-    }
-    #figure {
-    float: none; 
-    width: auto;
-    margin-top: 12%;
-    }
     #header {
     flex-wrap: wrap;
     }
@@ -219,11 +231,6 @@
 }
 
 @media (max-width:560px) {
-    .foot-box {
-    width: 24%;
-    display: flex;
-    justify-content: space-between;
-    }
     .social-box {
     width: auto;
     margin: auto;
@@ -240,7 +247,35 @@
     }
     .container-portfolio {
         margin-top: 0;
-    }    
+    }   
+    #nav {
+    margin-left: 6%;
+    }
+    .careers {
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+    .careers-arrow {
+    display: none;
+    }
+    .span7 {
+    width: 100%;
+    }
+    .portfolio-item-image-list {
+        max-width: 100%;
+    }
+    .portfolio-item-image {
+        margin-bottom: 30px;
+    }
+    .modal-title {
+        font-size: 25px;
+    }
+    .modal-lg {
+        width: 96%;
+    }
+    .modal {
+        left: 2%;
+    }
 }
 @media (max-width:480px) {
     .container-boxes {
@@ -263,10 +298,28 @@
     .careers-work h2 {
     font-size: 1.5rem;
     }
-    
+    .careers-title {
+    font-size: 1.4rem;
+    }
+    .careers-title * img {
+    width: 40px;
+    }
+    #figure {
+    height: auto;
+    }
+    #figure-nav {
+    flex-wrap: wrap;
+    }
+    #nav {
+    width: auto;
+    margin: 7% auto;    
+    }
 }
 @media (max-width:400px){
     #slogan {
     font-size:1.6rem;
+    }
+    #figure {
+    width: 35%;
     }
 }

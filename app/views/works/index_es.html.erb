@@ -1,37 +1,93 @@
 
-    <body>
+	<div class="container-portfolio">
+        <div class="careers-title work">
+            <li><img src="img/developing.png"> Nuestros desarrollos </li>
+        </div>
+        
+		<ul id="filters" class="clearfix">
+			<li><span class="filter active" data-filter=".all">Todos</span></li>
+			<li><span class="filter" data-filter=".app">App</span></li>
+			<li><span class="filter" data-filter=".bot">Bot</span></li>
+			<li><span class="filter" data-filter=".brand">Marca</span></li>
+			<li><span class="filter" data-filter=".website">Website</span></li>
+		</ul>
 
+            
+		<div id="portfoliolist">
 
-        <!-- CONTENT -->
-        <div id="content" class="clearfix">
-
-            <div id="works" class="clearfix">
-                <div class="careers-title work">
-                    <li><img src="img/developing.png"> Nuestros desarrollos </li>
-                </div>
-                <div class="work-dev">
-                    <img src="img/btp.png">
-                </div>
-                <div class="work-description">
-                    <h3>Battlepro</h3>
-                    <p>Battlepro es una plataforma que permite que jugadores de deportes electronicos a lo largo del mundo puedan competir por dinero real. </p>
-                </div>
-                <div class="work-dev">
-                    <img src="img/turing-large.png">
-                </div>
-                <div class="work-description">
-                    <h3>Turing</h3>
-                    <p>La plataforma de Turing les permite a los gobiernos utilizar la informacion que generan mas eficientemente. Permitiendoles reducir costos y alocar activos mas eficientemente. </p>
-                </div>
-            </div><!-- end works -->
-
-
-            <div id="portfolio">
+		    <% @works.each do |work| %>
+          <div class="portfolio all <%= JSON.parse(work.categories).join(' ') %>" data-cat="logo" data-toggle="modal" data-target=".bs-modal-lg" data-key="<%= work.id %>">
+    				<div class="portfolio-wrapper">				
+    					<img src="<%= work.image %>" alt="" />
+    					<div class="label">
+    						<div class="label-text">
+    							<a class="text-title"><%= work.name %></a>
+    							<span class="text-categories"><%= JSON.parse(work.categories).join(' / ') %></span>
+    						</div>
+    						<div class="label-bg"></div>
+    					</div>
+    				</div>
+    			</div>	
+        <%end %>
+			
+		</div>
+        
+    </div>
                 
-            </div><!-- end portfolio -->
-
-        </div><!-- end content -->
-
-    
-    </body>
-</html>
+        <div class="modal fade bs-modal-lg modal-lg" tabindex="-1" aria-labelledby="myLargeModalLabel">
+          <div class="modal-dialog"  role="dialog" >
+            <div class="modal-content" role='document'>
+            
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+              </div>
+              <div class="modal-body">
+                
+                <p class='work-description'></p>
+                <div class='portfolio-item-image-list'>
+                </div>
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="blue-button" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div> 
+        </div>
+      </div>  
+	
+	
+	<script type='text/javascript'>
+	    $(document).ready(function() {
+      	    $('.bs-modal-lg').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget) // Button that triggered the modal
+                var works = <%= raw @works.to_json %> // Turn Ruby array into JS array
+                var work_id = button.data('key') - 1 // Select the relevant work id
+                var work = works[work_id]; // Find the relevant work data in the array
+                var images = JSON.parse(work.images);
+                
+                var modal = $(this) // Select the modal we're updating
+                
+                modal.find('.work-description').text(work.descripcion);
+                modal.find('.modal-title').text(work.name);
+                
+                var imageList = modal.find('.portfolio-item-image-list');
+                
+                images.forEach(function(element) {
+                   imageList.append('<img src="' + element + '" class="portfolio-item-image"/>'); 
+                });
+                
+                if (work.link) {
+                  modal.find('.modal-body').append('<a href="' + work.link  + '" target="_blank" class="blue-button portfolio-item-link">Visitar el Sitio</a>')
+                }
+                
+	        })
+	        
+	        $('.bs-modal-lg').on('hide.bs.modal', function (event) {
+	            var modal = $(this) // Select the modal we're updating
+                
+                modal.find('.portfolio-item-image-list').empty();
+                modal.find('.portfolio-item-link').remove();
+	        })
+        })
+	</script>
