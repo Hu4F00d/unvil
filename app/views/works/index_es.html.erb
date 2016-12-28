@@ -57,7 +57,7 @@
       </div>  
 	
 	
-	<script type='text/javascript'>
+		<script type='text/javascript'>
 	    $(document).ready(function() {
       	    $('.bs-modal-lg').on('show.bs.modal', function (event) {
                 var button = $(event.relatedTarget) // Button that triggered the modal
@@ -71,15 +71,24 @@
                 modal.find('.work-description').text(work.descripcion);
                 modal.find('.modal-title').text(work.name);
                 
+               if (work.link) {
+                  modal.find('.modal-body').append('<div class="link-container"><a href="' + work.link  + '" target="_blank" class="blue-button portfolio-item-link">Visitar el Sitio</a></div>')
+               }
+               
                 var imageList = modal.find('.portfolio-item-image-list');
-                
-                images.forEach(function(element) {
-                   imageList.append('<img src="' + element + '" class="portfolio-item-image"/>'); 
+               
+             
+                images.forEach(function(element, index) {
+                   if (index <= 1) {
+                     imageList.append('<img src="' + element + '" class="portfolio-item-image"/>'); 
+                   } else {
+                     imageList.append('<img src="img/default.svg" data-src="' + element + '" class="lazyload portfolio-item-image"/>'); 
+                   }
                 });
                 
-                if (work.link) {
-                  modal.find('.modal-body').append('<a href="' + work.link  + '" target="_blank" class="blue-button portfolio-item-link">Visitar el Sitio</a>')
-                }
+                $(".portfolio-item-image-list").find("img").lazyLoadXT();
+                
+                
                 
 	        })
 	        
@@ -90,4 +99,7 @@
                 modal.find('.portfolio-item-link').remove();
 	        })
         })
+        
 	</script>
+	
+	

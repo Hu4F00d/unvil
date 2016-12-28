@@ -9,7 +9,7 @@
 			<li><span class="filter" data-filter=".app">App</span></li>
 			<li><span class="filter" data-filter=".bot">Bot</span></li>
 			<li><span class="filter" data-filter=".brand">Brand</span></li>
-			<li><span class="filter" data-filter=".website">Website</span></li>
+			<li><span class="filter" data-filter=".website">Web</span></li>
 		</ul>
 
             
@@ -71,8 +71,12 @@
                 modal.find('.work-description').text(work.description);
                 modal.find('.modal-title').text(work.name);
                 
+               if (work.link) {
+                  modal.find('.modal-body').append('<div class="link-container"><a href="' + work.link  + '" target="_blank" class="blue-button portfolio-item-link">Visit the Site</a></div>')
+               }
+               
                 var imageList = modal.find('.portfolio-item-image-list');
-             
+               
              
                 images.forEach(function(element, index) {
                    if (index <= 1) {
@@ -82,11 +86,8 @@
                    }
                 });
                 
-                $("img").lazyLoadXT();
+                $(".portfolio-item-image-list").find("img").lazyLoadXT();
                 
-               if (work.link) {
-                  modal.find('.modal-body').append('<a href="' + work.link  + '" target="_blank" class="blue-button portfolio-item-link">Visit the Site</a>')
-               }
                 
                 
 	        })
