@@ -31,7 +31,7 @@ Work.create(name: 'Proglove', description: 'We built and iterated a prototype to
             image: 'img/portfolio/proglove_thumbnail.png', images: '["img/portfolio/proglove_1.jpg", "img/portfolio/proglove_2.jpg"]', categories: '["app"]')
             
 Work.create(name: 'Coinding', description: 'We were the developers of the app, website and brand behind Coinding, an augmented reality mobile game based around the digital currency bitcoin.', descripcion: 'Fuimos los desarrolladores de la app, website y marca de Coinding, un juego de realidad aumentada basado en la moneda digital bitcoin.', 
-            image: 'img/portfolio/coinding_thumbnail.jpg', images: '["img/portfolio/coinding_1.png", "img/portfolio/coinding_2.png", "img/portfolio/coinding_3.png", "img/portfolio/coinding_4.png", "img/portfolio/coinding_5.png", "img/portfolio/coinding_6.png", "img/portfolio/coinding_17.png"]', categories: '["app", "brand", "website"]')
+            image: 'img/portfolio/coinding_thumbnail.jpg', images: '["img/portfolio/coinding_1.png", "img/portfolio/coinding_2.png", "img/portfolio/coinding_3.png", "img/portfolio/coinding_4.png", "img/portfolio/coinding_5.png", "img/portfolio/coinding_6.png", "img/portfolio/coinding_7.png"]', categories: '["app", "brand", "website"]')
             
 Work.create(name: 'Audioblog', description: 'We designed the logo and brand for Audioblog, an app for people to listen to their favorite blog posts instead of reading them.', descripcion: 'Diseñamos el logo y la marca de Audioblog, una app donde gente puede escuchar sus blogs favoritos en vez de leerlos.',
             image: 'img/portfolio/audioblog_thumbnail.png', images: '["img/portfolio/audioblog_1.jpg", "img/portfolio/audioblog_2.jpg"]', categories: '["brand"]')

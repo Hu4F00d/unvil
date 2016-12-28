@@ -1,7 +1,7 @@
 
 	<div class="container-portfolio">
         <div class="careers-title work">
-            <li><img src="img/developing.png"> Nuestros desarrollos </li>
+            <li><img src="img/developing.png"> Our projects </li>
         </div>
         
 		<ul id="filters" class="clearfix">
@@ -72,14 +72,22 @@
                 modal.find('.modal-title').text(work.name);
                 
                 var imageList = modal.find('.portfolio-item-image-list');
-                
-                images.forEach(function(element) {
-                   imageList.append('<img src="' + element + '" class="portfolio-item-image"/>'); 
+             
+             
+                images.forEach(function(element, index) {
+                   if (index <= 1) {
+                     imageList.append('<img src="' + element + '" class="portfolio-item-image"/>'); 
+                   } else {
+                     imageList.append('<img src="img/default.svg" data-src="' + element + '" class="lazyload portfolio-item-image"/>'); 
+                   }
                 });
                 
-                if (work.link) {
+                $("img").lazyLoadXT();
+                
+               if (work.link) {
                   modal.find('.modal-body').append('<a href="' + work.link  + '" target="_blank" class="blue-button portfolio-item-link">Visit the Site</a>')
-                }
+               }
+                
                 
 	        })
 	        
@@ -90,6 +98,7 @@
                 modal.find('.portfolio-item-link').remove();
 	        })
         })
+        
 	</script>
 
 
