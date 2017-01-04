@@ -109,7 +109,7 @@ textarea { resize: vertical; }
     .imagen { float: left; height: auto; width: auto; }
 
     #content-info {margin: 80px 0 30px 0;display: flex;flex-wrap: wrap;width: 100%;justify-content: space-around;}
-        .index-info {width: 26%;margin-bottom: 8%;}
+        .index-info {width: 26%;margin-bottom: 87px;}
             .index-info h3 { font-size: 30px; font-family: "HelveticaNeueLTStd-Bd"; }
             .index-info p { color: #89949b; font-size: 17px; line-height: 1.5; }
             .index-info-img { margin-top: 15px; text-align: center; }
@@ -134,10 +134,10 @@ textarea { resize: vertical; }
         .careers-arrow { background: url(../img/careers-arrow.png); background-repeat: no-repeat; height: 37px; position: absolute; margin-top: 60px; margin-left: -25px; width: 31px; z-index: 50; }
 
 .careers-work {display: flex; flex-wrap: wrap;}
-    .careers-work h2 { color: #4E6D7C; margin-bottom: 5%; font-size: 2.5rem; }
-    .container-boxes { display: flex;flex-wrap: wrap;justify-content: center; margin-bottom: 5%;}
-        .careers-box { margin: 3% 1%; width: 43%; display: flex;flex-wrap: wrap;justify-content: space-between; }
-            .careers-box h3 { font-size: 1.6rem; line-height: 1.1; font-family: "HelveticaNeueLTStd-Bd"; width: 100%; height: auto; margin-bottom:5%;}
+    .careers-work h2 { color: #4E6D7C; margin-bottom: 28px; font-size: 2.5rem; }
+    .container-boxes { display: flex;flex-wrap: wrap;justify-content: center; margin-bottom: 26px;}
+        .careers-box { margin: 30px 6px; width: 43%; display: flex;flex-wrap: wrap;justify-content: space-between; }
+            .careers-box h3 { font-size: 1.6rem; line-height: 1.1; font-family: "HelveticaNeueLTStd-Bd"; width: 100%; height: auto; margin-bottom:8px;}
             .careers-box p { color: #89949B; line-height: 1.2; font-size: 1.1rem; margin:0;}
                 .careers-box-left { width: 50%;display: flex;align-items: flex-start;}
                 .careers-box-right {width: 45%; text-align: center; }
